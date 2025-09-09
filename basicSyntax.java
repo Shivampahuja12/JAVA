@@ -39,13 +39,8 @@
     ** But if you’re in a strict environment (or your settings treat warnings as errors), it might stop execution.
 */
 
-public class basicSyntax {
+public class basicSyntax { // here there will always a public class specifier or empty (only class classname)
     public static void main(String[] args){
-        int age = 21;                 // integer variable
-        String name = "Ravi";         // string variable
-        double marks = 92.5;          // decimal number
-        System.out.println("Age: " + age);
-        System.out.println("Name: " + name);
-        System.out.println("Marks: " + marks);
+        System.out.println("Hello World");
     }
 }
