@@ -11,9 +11,12 @@ public class DigitalRootSum {
     }
 
     static int digitalSum(int n){
-        int x = 0;
-        while (n>10) {
+        int x = n;
+        while (x>10) {
             x = ans(n);
+            if (x>=10){
+                x = ans(x);
+            }
         }
         return x;
     }
