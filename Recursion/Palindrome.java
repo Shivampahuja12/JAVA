@@ -26,7 +26,6 @@ public class Palindrome {
         if (a==0) return temp;
         temp = temp * 10 + a%10;
         return checkPalindromeRec(a/10, temp);
-
     }
 }
 
