@@ -3,7 +3,11 @@ public class ReverseNumber {
         /* int ans = reverseNum(1505);
         System.out.println(ans); */
 
-        int answer = reverseRecursion(145555, 0);
+        /* int answer = reverseRecursion(145555, 0);
+        System.out.println(answer); */
+
+
+        int answer = reverseRecursion2(1234);
         System.out.println(answer);
 
     }
@@ -11,6 +15,11 @@ public class ReverseNumber {
         if (n==0) return ans;
         ans = ans * 10 + (n%10); 
         return reverseRecursion(n/10, ans);
+    }
+
+    static int reverseRecursion2(int n){
+        if (n==0) return n;
+        return (n%10 * 10) + reverseRecursion2(n/10);
     }
 
     static int reverseForLoop(int n){
