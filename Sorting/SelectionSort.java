@@ -12,6 +12,8 @@ public class SelectionSort {
 		// SelectionSorting(a);
 		selectionSortPractice(a);
 		System.out.println(Arrays.toString(a));
+		selectionSortPractice2(a);
+		System.out.println(Arrays.toString(a));
 	}
 
 	static void SelectionSorting(int[] a){
@@ -29,6 +31,18 @@ public class SelectionSort {
 			}
 
 			swap(a, smallestIdx, i);	
+		}
+	}
+
+	static void selectionSortPractice2(int[] a){
+		for (int i=0; i<a.length-1; i++){
+			int sIdx = i;
+			for (int j=i+1; j<a.length; j++){
+				if (a[j] > a[sIdx]){
+					sIdx = j;
+				}
+			}
+			swap(a, sIdx, i);
 		}
 	}
 
