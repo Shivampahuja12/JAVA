@@ -7,8 +7,16 @@ public class ReverseNumber {
         System.out.println(answer); */
 
 
-        int answer = reverseRecursion2(1234);
+        int n = 1234;
+        int digits = (int)(Math.log10(n) + 1);
+        int answer = reverseRecursion2(n, digits);    
         System.out.println(answer);
+
+
+        // int n = 1234;
+        // int digits = (int)(Math.log10(n) + 1);
+        // int answer = reverseRecursion3(n, digits);  
+        // System.out.println(answer);
 
     }
     static int reverseRecursion(int n, int ans){
@@ -17,10 +25,14 @@ public class ReverseNumber {
         return reverseRecursion(n/10, ans);
     }
 
-    static int reverseRecursion2(int n){
-        if (n==0) return n;
-        return (n%10 * 10) + reverseRecursion2(n/10);
+    static int reverseRecursion2(int n, int digits){
+        if (n==0) return 0;
+        return (n%10) * (int)Math.pow(10, digits-1) + reverseRecursion2(n/10, digits-1);
     }
+
+    // static int reverseRecursion3(int n, int args){
+        
+    // }
 
     static int reverseForLoop(int n){
         int ans = 0;

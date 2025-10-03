@@ -1,6 +1,6 @@
 public class Palindrome {
     public static void main(String[] args) {
-        int a = 12321;
+        int a = 1234321;
         // boolean ans = checkPalindromeFor(a);
         // if (ans) System.out.println("Palindrome");
         // else System.out.println("Not palin");
